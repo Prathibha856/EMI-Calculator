@@ -1,0 +1,251 @@
+/* Comparison Page Specific Styles */
+.comparison-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 200px);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e1e4e8;
+}
+
+.page-header h1 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+}
+
+.page-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Scenarios Container */
+.scenarios-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.scenario-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scenario-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.scenario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e1e4e8;
+}
+
+.scenario-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+.scenario-name:focus {
+  outline: none;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.remove-scenario {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.remove-scenario:hover {
+  background: #ff5252;
+  transform: scale(1.1);
+}
+
+.scenario-results {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.result-item strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.add-scenario {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-scenario:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Comparison Tabs */
+.comparison-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e1e4e8;
+  overflow-x: auto;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.tab-button:hover {
+  color: #4a6bdf;
+}
+
+.tab-button.active {
+  color: #4a6bdf;
+  border-bottom-color: #4a6bdf;
+}
+
+/* Comparison Results */
+.comparison-results {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-table {
+  overflow-x: auto;
+}
+
+.summary-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.summary-table th,
+.summary-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.summary-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #2c3e50;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.summary-table th:first-child {
+  background: #4a6bdf;
+  color: white;
+}
+
+.summary-table tr:hover {
+  background: #f8f9fa;
+}
+
+.summary-table td:first-child {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .scenarios-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .comparison-page {
+    padding: 1rem;
+  }
+  
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .scenarios-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    flex: 1;
+    min-width: 120px;
+  }
+}
